@@ -6,6 +6,8 @@ const NAV_ITEMS = [
   { id: "hero", label: "홈" },
   { id: "about", label: "제품소개" },
   { id: "benefits", label: "효능" },
+  { id: "certifications", label: "인증" },
+  { id: "faq", label: "Q&A" },
   { id: "reviews", label: "고객후기" },
   { id: "contact", label: "문의하기" },
 ];
@@ -202,7 +204,7 @@ export default function Home() {
 
         <div
           className={`md:hidden overflow-hidden transition-all duration-300 bg-dark-900/95 backdrop-blur-md ${
-            mobileMenuOpen ? "max-h-80" : "max-h-0"
+            mobileMenuOpen ? "max-h-96" : "max-h-0"
           }`}
         >
           <ul className="px-4 py-4 space-y-2">
@@ -396,6 +398,84 @@ export default function Home() {
               오늘 입고분 한정, 지금 바로 확인하세요
             </p>
             <CTAButton />
+          </div>
+        </div>
+      </section>
+
+      {/* Certifications */}
+      <section id="certifications" className="py-20 md:py-28 bg-dark-800">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <span className="text-gold-400 text-sm font-semibold tracking-widest uppercase">
+              Certifications
+            </span>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-3 text-white">
+              믿을 수 있는 인증서류
+            </h2>
+            <div className="w-16 h-1 bg-gold-400 mx-auto mt-4 rounded-full" />
+          </div>
+
+          <div className="space-y-6 md:space-y-8">
+            {[
+              { src: "/images/20260331_143513 2.jpg", alt: "식품안전관리인증, ISO22000, CFS인증, 베트남사업자, 사업자등록증, 영업등록증, 수입식품검사결과, 수입신고필증" },
+              { src: "/images/20260331_134905 2.jpg", alt: "할인판매수입표준, 건강보조식품 인증 라이센스, 하노이 과학기술부 원재 의약품 시험 연구 센터, 식품위생인증, GMP" },
+            ].map((img) => (
+              <div
+                key={img.src}
+                className="rounded-2xl overflow-hidden border border-gold-400/30 shadow-lg shadow-gold-400/5"
+              >
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  className="w-full h-auto block"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section id="faq" className="py-20 md:py-28 bg-dark-900">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <span className="text-gold-400 text-sm font-semibold tracking-widest uppercase">
+              Q&A
+            </span>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-3 text-white">
+              자주 묻는 질문
+            </h2>
+            <div className="w-16 h-1 bg-gold-400 mx-auto mt-4 rounded-full" />
+          </div>
+
+          <div className="space-y-6">
+            {[
+              {
+                q: "하루 권장 섭취량은 어떻게 되나요?",
+                a: "1일 1회 1정씩 물과 함께 섭취하세요.",
+              },
+              {
+                q: "언제, 어떻게 섭취하면 좋나요?",
+                a: "하루 중 편한 시간대 섭취하셔도 무방합니다.\n단, 위가 예민한 경우 음식과 함께 드시기를 권합니다.",
+              },
+              {
+                q: "섭취 시 주의해야할 점이 있나요?",
+                a: "알레르기 체질, 특이 체질의 경우 성분을 꼭 확인 후 섭취하세요.\n개인의 신체에 따라 평소와 다른 증상이 있을 경우 의사와 상의하세요.",
+              },
+            ].map((item) => (
+              <div
+                key={item.q}
+                className="bg-dark-800 border border-dark-600 rounded-2xl p-6 md:p-8 hover:border-gold-400/30 transition-all duration-300"
+              >
+                <h3 className="text-gold-400 font-bold text-base md:text-lg mb-3 flex items-start gap-2">
+                  <span className="shrink-0">Q.</span>
+                  <span>{item.q}</span>
+                </h3>
+                <div className="text-dark-200 text-sm md:text-base leading-relaxed pl-7 whitespace-pre-line">
+                  {item.a}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
