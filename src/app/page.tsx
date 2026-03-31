@@ -290,16 +290,14 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
-            <div className="relative aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-gold-400/20 to-dark-700 flex items-center justify-center border border-gold-400/20">
-              <div className="text-center p-8">
-                <div className="text-6xl md:text-7xl mb-4">🌿</div>
-                <p className="text-gold-400 font-bold text-xl md:text-2xl">
-                  AGAGOLD+
-                </p>
-                <p className="text-dark-300 text-sm mt-2">
-                  Premium Agarwood Oil
-                </p>
-              </div>
+            <div className="relative aspect-video rounded-2xl overflow-hidden border border-gold-400/20">
+              <iframe
+                src="https://www.youtube.com/embed/JXn4XG-o90c?autoplay=1&mute=1&loop=1&playlist=JXn4XG-o90c&rel=0"
+                title="아가골드플러스 제품 소개"
+                allow="autoplay; encrypted-media"
+                allowFullScreen
+                className="absolute inset-0 w-full h-full"
+              />
             </div>
 
             <div className="space-y-6">
