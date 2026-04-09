@@ -551,6 +551,30 @@ export default function Home() {
             </p>
           </div>
 
+          <div className="bg-dark-800 border border-gold-400/30 rounded-2xl p-6 md:p-8 mb-8 text-center">
+            <p className="text-gold-400 text-xs sm:text-sm font-semibold tracking-widest uppercase mb-4">
+              아가골드 가격 안내
+            </p>
+            <div className="flex flex-col items-center gap-2">
+              <div className="flex items-center gap-2 text-dark-400">
+                <span className="text-sm sm:text-base">정상가</span>
+                <span className="text-base sm:text-lg line-through">1,350,000원</span>
+              </div>
+              <div className="flex items-center gap-2 text-dark-300">
+                <span className="text-sm sm:text-base">할인가</span>
+                <span className="text-lg sm:text-xl line-through">1,050,000원</span>
+              </div>
+              <div className="mt-3 pt-3 border-t border-dark-600 w-full">
+                <p className="text-xs sm:text-sm text-gold-300 mb-1">
+                  아가골드 공식몰 론칭 기념
+                </p>
+                <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-gold-400">
+                  790,000원
+                </p>
+              </div>
+            </div>
+          </div>
+
           <form
             onSubmit={handleSubmit}
             className="bg-dark-800 border border-dark-600 rounded-2xl p-6 md:p-10 space-y-6"
