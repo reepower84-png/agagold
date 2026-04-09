@@ -553,7 +553,7 @@ export default function Home() {
 
           <div className="bg-dark-800 border border-gold-400/30 rounded-2xl p-6 md:p-8 mb-8 text-center">
             <p className="text-gold-400 text-xs sm:text-sm font-semibold tracking-widest uppercase mb-4">
-              아가골드 가격 안내
+              아가골드플러스 베트남 침향 오일 캡슐 30정 가격 안내
             </p>
             <div className="flex flex-col items-center gap-2">
               <div className="flex items-center gap-2 text-dark-400">
