@@ -391,6 +391,50 @@ export default function Home() {
             ))}
           </div>
 
+          <div className="mt-20 md:mt-24">
+            <div className="text-center mb-12">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white">
+                왜 다들 <span className="text-gold-400">베트남산 침향</span>이 좋다고 할까요?
+              </h3>
+              <div className="w-16 h-1 bg-gold-400 mx-auto mt-4 rounded-full" />
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-6 md:gap-8">
+              {[
+                {
+                  num: "01",
+                  title: "압도적인 품질 (향과 성분)",
+                  desc: "베트남은 침향 나무 중에서도 가장 품질이 좋다고 알려진 '아퀼라리아 크라사(Aquilaria Crassna)' 종의 주산지입니다.",
+                },
+                {
+                  num: "02",
+                  title: "기남(Kynam)의 존재",
+                  desc: "침향 중에서도 최고봉이라 불리는 '기남(奇楠)'이 주로 베트남에서 발견됩니다.",
+                },
+                {
+                  num: "03",
+                  title: "극도로 높은 희소성",
+                  desc: "제대로 된 약효와 향을 가진 침향이 되려면 최소 수십 년에서 수백 년의 시간이 필요합니다.",
+                },
+              ].map((item) => (
+                <div
+                  key={item.num}
+                  className="bg-dark-800 border border-gold-400/20 rounded-2xl p-6 md:p-8 hover:border-gold-400/50 transition-all duration-300"
+                >
+                  <div className="text-gold-400 text-sm font-bold tracking-widest mb-3">
+                    {item.num}
+                  </div>
+                  <h4 className="text-lg md:text-xl font-bold text-white mb-3">
+                    {item.title}
+                  </h4>
+                  <p className="text-dark-300 text-sm md:text-base leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
           <div className="text-center mt-14">
             <p className="text-gold-300 text-lg md:text-xl font-semibold mb-6">
               오늘 입고분 한정, 지금 바로 확인하세요
